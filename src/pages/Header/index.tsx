@@ -24,10 +24,9 @@ const Header = memo<DivProps>(({ children }) => {
       actionsStyle={{ flex: 0 }}
       logo={
         <a
-          href={`${homepage}/releases`}
+          href={'#'}
           rel="noreferrer"
           style={{ alignItems: 'center', color: theme.colorText, display: 'flex' }}
-          target="_blank"
         >
           <Tooltip title={`${name} v${version}`}>
             <Logo />
