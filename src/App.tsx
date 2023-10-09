@@ -35,7 +35,7 @@ export const App = memo(() => {
   return (
     <Suspense fallback="loading...">
       <Helmet>
-        <link
+        {/* <link
           href="https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/apple-touch-icon.png"
           rel="apple-touch-icon"
           sizes="180x180"
@@ -60,7 +60,7 @@ export const App = memo(() => {
           color="#000000"
           href="https://registry.npmmirror.com/@lobehub/assets-favicons/1.1.0/files/assets/safari-pinned-tab.svg"
           rel="mask-icon"
-        />
+        /> */}
         <meta content="Stable Diffusion · LobeHub" name="apple-mobile-web-app-title" />
         <meta content="Stable Diffusion · LobeHub" name="application-name" />
         <meta content="#000000" name="msapplication-TileColor" />
