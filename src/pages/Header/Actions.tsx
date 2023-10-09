@@ -34,9 +34,11 @@ const Actions = memo<ActionsProps>(() => {
     window.location.replace(qs.stringifyUrl(gradioURL));
   }, [themeMode]);
 
+  const showSetting = window.location.href.indexOf('setting=1') > -1
+
   return (
     <>
-      <Space.Compact>
+      {showSetting ? <Space.Compact>
         {!mobile && (
           <>
             <a href="https://civitai.com/" rel="noreferrer" target="_blank">
@@ -58,7 +60,7 @@ const Actions = memo<ActionsProps>(() => {
           title={t('switchTheme')}
         />
         <ActionIcon icon={Settings} onClick={() => setIsSettingOpen(true)} title={t('setting')} />
-      </Space.Compact>
+      </Space.Compact> : null }
       <Setting onCancel={() => setIsSettingOpen(false)} open={isSettingOpen} />
       <Giscus onCancel={() => setIsModalOpen(false)} open={isModalOpen} />
     </>
